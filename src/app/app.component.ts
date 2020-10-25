@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Paractice';
+  oddNumbers = [1, 3, 5, 7];
+  evenNumber = [2, 4, 6, 8];
+  onlyOdd: false;
+
+  value = 25;
 }
