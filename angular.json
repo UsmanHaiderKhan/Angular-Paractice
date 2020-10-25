@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-Paractice"
+    }
+  },
+  "defaultProject": "Angular-Paractice",
+  "cli": {
+    "analytics": "70c6a7a0-e31c-4ca6-be65-0ecdd79abd63"
+  }
 }
