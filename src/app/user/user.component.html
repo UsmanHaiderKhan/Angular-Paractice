@@ -11,6 +11,9 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <button type="button" (click)="suggestedUser()" class="btn btn-info">Suggested UserName</button>
+                    </div>
+                    <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control"  name="email" ngModel required placeholder="Email" #mail="ngModel">
                         <div>
@@ -25,6 +28,13 @@
                             <option value="nick">Your Nick Name?</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="">Select Gender</label>
+                        <div *ngFor="let gender of genders">
+                            <input type="radio" name="gender" required ngModel [value]="gender">
+                            <label for="gender" class="ml-2">{{gender}}</label>
+                        </div>
+                    </div>
                     <p *ngIf="!userData.valid && userData.touched">Form data is not Valid!</p>
                     <div>
                         <button type="submit" [disabled]="!f.valid" class="btn btn-primary btn-block">Submit User</button>
@@ -32,6 +42,18 @@
                 </div>
                 
             </form>
+            <hr>
+            <div class="container">
+                <div class="row" *ngIf="submitted">
+                    <div class="col-md-12">
+                        <h3>Your Submitted Data </h3>
+                        <p>UserName:{{user.username}}</p>
+                        <p>Email:{{user.email}}</p>
+                        <p>Secret:{{user.secret}}</p>
+                        <p>Gender:{{user.gender}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
